@@ -1,0 +1,14 @@
+<head>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <h1>Portfolio</h1>
+    {% for post in posts.all %}
+    <div class = "container">
+        <h2><a href="detail/{{post.id}}/">{{post.name}}</a></h2>
+    </div>
+    
+    {%endfor%}
+    <a href="{% url 'new'%}" class="top-menu">입력하기</a>
+</body>
